@@ -1,0 +1,19 @@
+<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Assistente Acadêmico Local</title><link rel="stylesheet" href="style.css"></head>
+<body><header><span class="selo">LABORATÓRIO • IA LOCAL</span><h1>Conhecimento que você pode consultar.</h1>
+<p>Cadastre documentos e explore as respostas com suas fontes.</p><p id="config" class="selo">Carregando configuração…</p></header>
+<main><section><h2>01 / Documentos</h2><p class="muted">Base didática • TXT UTF-8 • até 30.000 caracteres por documento</p>
+<form id="docForm"><input id="docId" type="hidden">
+<label for="titulo">Título</label><input id="titulo" maxlength="120" required placeholder="Ex.: Entrega do relatório">
+<label for="arquivo">Importar TXT (opcional)</label><input id="arquivo" type="file" accept=".txt,text/plain">
+<label for="conteudo">Conteúdo — revise antes de salvar</label><textarea id="conteudo" rows="8" maxlength="30000" required></textarea>
+<div class="actions"><button id="salvar">Salvar documento</button><button id="novo" type="button" class="secondary">Limpar / novo</button></div></form>
+<p id="docStatus" role="status"></p><div id="lista"></div></section>
+<section><h2>02 / Pergunte à base</h2><p class="muted">Cada pergunta é independente. O histórico visual não é enviado ao modelo.</p>
+<div class="actions"><button class="secondary exemplo" type="button">Quais documentos são necessários para iniciar o estágio?</button>
+<button class="secondary exemplo" type="button">Qual o prazo do relatório?</button></div>
+<div id="conversa" aria-live="polite"><p class="muted">Cadastre os textos da pasta exemplos para começar. As regras são fictícias.</p></div>
+<form id="chatForm"><label for="pergunta">Sua pergunta</label><textarea id="pergunta" rows="2" maxlength="500" required></textarea>
+<button id="enviar">Consultar documentos</button></form><p id="chatStatus" role="status"></p>
+<p class="muted">Busca por palavras-chave. Trechos recuperados não garantem que a resposta esteja correta: confira as fontes.</p>
+</section></main><footer>Projeto didático • execução local • sem login • regulamentos fictícios</footer><script src="app.js"></script></body></html>
